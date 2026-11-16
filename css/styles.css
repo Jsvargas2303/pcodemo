@@ -1,12 +1,6 @@
 /* Colombia B2B Marketplace — conceptual demo by SV2 Labs */
 
-@font-face {
-  font-family: Inter;
-  src: url("../fonts/Inter-Variable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("fonts.css");
 
 :root {
   --navy-950: #07111f;
@@ -40,7 +34,8 @@
   --header-h: 72px;
   --demo-h: 36px;
   --wrap: 1180px;
-  --font: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font: Poppins, "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: Jost, Poppins, "Segoe UI", system-ui, sans-serif;
 }
 
 *,
@@ -53,11 +48,31 @@ body {
   margin: 0;
   font-family: var(--font);
   font-size: 16px;
-  line-height: 1.55;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.005em;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3,
+.brand-name,
+.hero-stat b,
+.date-block b,
+.fact b,
+.mono-logo {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.eyebrow,
+.hero-kicker,
+.site-footer h4,
+.date-block span,
+.fact span {
+  font-family: var(--font-display);
 }
 
 img { max-width: 100%; display: block; }
@@ -172,16 +187,16 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 
 .brand-name span:first-child {
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-size: 15.5px;
+  letter-spacing: -0.01em;
   color: var(--navy-900);
 }
 
 .brand-name span:last-child {
   font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -395,9 +410,9 @@ h1, h2, h3, h4, p { margin: 0; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold-soft);
   margin-bottom: 16px;
@@ -412,16 +427,16 @@ h1, h2, h3, h4, p { margin: 0; }
 
 .hero h1 {
   font-size: clamp(2rem, 5.2vw, 3.55rem);
-  font-weight: 650;
-  letter-spacing: -0.038em;
-  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.06;
   max-width: 16ch;
 }
 
 .hero .lede {
-  margin-top: 16px;
+  margin-top: 18px;
   font-size: 17px;
-  line-height: 1.55;
+  line-height: 1.6;
   color: #c9d2e3;
   max-width: 42ch;
 }
@@ -500,8 +515,8 @@ h1, h2, h3, h4, p { margin: 0; }
 .hero-stat b {
   display: block;
   font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--white);
 }
 
@@ -566,9 +581,9 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 
 .eyebrow {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--blue-700);
   margin-bottom: 8px;
@@ -576,9 +591,9 @@ h1, h2, h3, h4, p { margin: 0; }
 
 .section h2 {
   font-size: clamp(1.5rem, 3vw, 2.05rem);
-  font-weight: 650;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
 }
 
 .section-head p, .subhead {
@@ -821,8 +836,8 @@ h1, h2, h3, h4, p { margin: 0; }
 
 .cta-band h2 {
   font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 650;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   max-width: 22ch;
 }
 
@@ -850,8 +865,9 @@ h1, h2, h3, h4, p { margin: 0; }
 
 .site-footer h4 {
   color: var(--white);
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 14px;
 }
@@ -890,8 +906,8 @@ h1, h2, h3, h4, p { margin: 0; }
 .crumbs a { color: var(--blue-700); font-weight: 500; }
 .page-hero h1 {
   font-size: clamp(1.6rem, 3vw, 2.1rem);
-  font-weight: 650;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 /* ——— Search layout ——— */
@@ -1154,8 +1170,8 @@ h1, h2, h3, h4, p { margin: 0; }
 
 .company-title-row h1 {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 650;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .company-title-row .meta-line {

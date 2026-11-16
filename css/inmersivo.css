@@ -1,12 +1,6 @@
 /* Colombia B2B Marketplace — immersive experience, SV2 Labs */
 
-@font-face {
-  font-family: Inter;
-  src: url("../fonts/Inter-Variable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("fonts.css");
 
 :root {
   --navy-950: #050910;
@@ -21,7 +15,8 @@
   --flag-red: #ce1126;
   --glass: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.14);
-  --font: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font: Poppins, "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: Jost, Poppins, "Segoe UI", system-ui, sans-serif;
   --header-h: 68px;
   --demo-h: 36px;
   --wrap: 1240px;
@@ -38,9 +33,25 @@ body.imm {
   font-family: var(--font);
   color: var(--ink);
   background: var(--navy-950);
-  line-height: 1.5;
+  line-height: 1.6;
+  letter-spacing: 0.005em;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+h1, h2, h3,
+.brand-name,
+.stat-card b,
+.date-block b {
+  font-family: var(--font-display);
+}
+
+.eyebrow,
+.hero-kicker,
+.sector-index,
+.site-footer h4,
+.date-block span {
+  font-family: var(--font-display);
 }
 
 @media (pointer: fine) {
@@ -137,8 +148,8 @@ h1, h2, h3, p { margin: 0; }
 .brand-mark i:nth-child(2) { background: var(--flag-blue); }
 .brand-mark i:nth-child(3) { background: var(--flag-red); }
 .brand-name { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-name span:first-child { font-weight: 700; font-size: 15px; letter-spacing: -.02em; }
-.brand-name span:last-child { font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.brand-name span:first-child { font-weight: 650; font-size: 15.5px; letter-spacing: -.01em; }
+.brand-name span:last-child { font-size: 10px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 
 .nav { display: none; align-items: center; gap: 2px; }
 .nav a { padding: 8px 11px; font-size: 13.5px; font-weight: 500; color: #c5ccda; border-radius: 8px; }
@@ -223,14 +234,14 @@ h1, h2, h3, p { margin: 0; }
 .hero-copy { max-width: 640px; position: relative; }
 .hero-kicker {
   display: inline-flex; align-items: center; gap: 10px;
-  font-size: 12px; font-weight: 700; letter-spacing: .16em;
+  font-size: 11.5px; font-weight: 500; letter-spacing: .2em;
   text-transform: uppercase; color: var(--gold-soft); margin-bottom: 20px;
 }
 .hero-kicker i { width: 22px; height: 2px; background: var(--gold); display: inline-block; }
 .hero h1 {
   font-size: clamp(2.4rem, 6.4vw, 5.2rem);
-  font-weight: 650;
-  letter-spacing: -.045em;
+  font-weight: 600;
+  letter-spacing: -.022em;
   line-height: 0.98;
 }
 .hero h1 .line { display: block; overflow: hidden; }
@@ -312,12 +323,12 @@ h1, h2, h3, p { margin: 0; }
   padding: 100px 0;
 }
 .eyebrow {
-  font-size: 12px; font-weight: 700; letter-spacing: .16em;
+  font-size: 11.5px; font-weight: 500; letter-spacing: .2em;
   text-transform: uppercase; color: var(--gold-soft); margin-bottom: 12px;
 }
 .section h2 {
   font-size: clamp(2rem, 4.4vw, 3.4rem);
-  font-weight: 650; letter-spacing: -.035em; line-height: 1.05;
+  font-weight: 600; letter-spacing: -.02em; line-height: 1.05;
 }
 
 /* Stats */
@@ -348,7 +359,7 @@ h1, h2, h3, p { margin: 0; }
 .stat-card b {
   display: block;
   font-size: clamp(2.6rem, 5vw, 4rem);
-  font-weight: 700; letter-spacing: -.04em;
+  font-weight: 600; letter-spacing: -.02em;
   color: #fff; line-height: 1;
 }
 .stat-card b .unit { font-size: .5em; font-weight: 650; letter-spacing: -.02em; }
@@ -384,10 +395,10 @@ h1, h2, h3, p { margin: 0; }
   .sector-slide { grid-template-columns: 1.1fr 0.9fr; gap: 60px; }
 }
 .sector-index {
-  font-size: 13px; font-weight: 700; letter-spacing: .16em;
+  font-size: 12px; font-weight: 500; letter-spacing: .2em;
   text-transform: uppercase; color: var(--gold-soft); margin-bottom: 16px;
 }
-.sector-slide h2 { font-size: clamp(2.4rem, 5.5vw, 4.6rem); }
+.sector-slide h2 { font-size: clamp(2.4rem, 5.5vw, 4.6rem); font-weight: 600; letter-spacing: -.022em; line-height: 0.98; }
 .sector-slide p { margin-top: 18px; color: #c5d0e0; font-size: 18px; max-width: 38ch; }
 .sector-slide .meta {
   margin-top: 28px; font-size: 15px; font-weight: 600; color: var(--gold);
@@ -536,7 +547,7 @@ h1, h2, h3, p { margin: 0; }
     var(--navy-950);
   border-top: 1px solid rgba(255,255,255,.06);
 }
-.cta-band h2 { font-size: clamp(2rem, 4vw, 3.2rem); max-width: 16ch; }
+.cta-band h2 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 600; letter-spacing: -.02em; max-width: 16ch; }
 .cta-band p { color: #c5d0e0; margin: 16px 0 28px; max-width: 46ch; }
 .cta-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 
@@ -548,7 +559,7 @@ h1, h2, h3, p { margin: 0; }
 }
 .footer-grid { display: grid; gap: 28px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.08); }
 @media (min-width: 800px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
-.site-footer h4 { color: #fff; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 14px; }
+.site-footer h4 { color: #fff; font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 14px; }
 .site-footer a { color: #c5ccda; display: block; padding: 4px 0; }
 .site-footer a:hover { color: #fff; }
 .footer-brand p { margin-top: 12px; font-size: 13.5px; max-width: 36ch; color: #9aa4b7; }
